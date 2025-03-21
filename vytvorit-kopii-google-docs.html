@@ -2,7 +2,7 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8">
-    <title>Vytvořit kopii Google Sheetsssss</title>
+    <title>Vytvořit kopii Google Sheets</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@
       function createCopy() {
         const docId = "18jFQabNJuIvjTINCLjaT0r4CGySGZu6KYkMUlUqp74M";
         const copyUrl = `https://docs.google.com/spreadsheets/d/${docId}/copy`;
-        window.open(copyUrl, '_blank');
+        window.location.href = copyUrl; // Otevře v aktuálním okně
       }
     </script>
   </body>
