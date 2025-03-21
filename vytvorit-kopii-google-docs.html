@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vytvořit kopii</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #155cc1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Vytvořte si vlastní kopii dokumentu</h2>
+    <button onclick="createCopy()">Vytvořit kopii</button>
+
+    <script>
+      function createCopy() {
+        const docId = "T18jFQabNJuIvjTINCLjaT0r4CGySGZu6KYkMUlUqp74M"; // ← sem vlož ID dokumentu
+        const copyUrl = `https://docs.google.com/document/d/18jFQabNJuIvjTINCLjaT0r4CGySGZu6KYkMUlUqp74M/copy`;
+        window.open(copyUrl, '_blank');
+      }
+    </script>
+  </body>
+</html>
