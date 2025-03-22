@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Background Video</title>
+  <title>Video Background</title>
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
       height: 100%;
       width: 100%;
       overflow: hidden;
+      background-color: #FBF5DE; /* světle žlutá */
     }
 
-    .video-background {
+    video {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      background-color: #FBF5DE;
       z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      font-family: sans-serif;
     }
   </style>
 </head>
 <body>
-  <video class="video-background" autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline>
     <source src="jezek.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
+    Váš prohlížeč nepodporuje HTML5 video.
   </video>
-
-  <div class="content">
-    <h1>Welcome!</h1>
-    <p>This is a responsive background video.</p>
-  </div>
 </body>
 </html>
