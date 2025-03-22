@@ -3,52 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ježek – Video na pozadí</title>
+  <title>Video Background</title>
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background-color: #fffde7; /* světle žlutá */
+      background-color: #FBF5DE; /* světle žlutá */
     }
 
-    .video-background {
+    video {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      object-fit: contain;
-      background-color: #fffde7;
+      object-fit: cover; /* video se roztáhne přes celé okno */
+      background-color: #FBF5DE;
       z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      font-family: sans-serif;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
   </style>
 </head>
 <body>
-  <video class="video-background" autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline>
     <source src="jezek.mp4" type="video/mp4" />
     Váš prohlížeč nepodporuje HTML5 video.
   </video>
-
-  <div class="content">
-    <h1>Welcome!</h1>
-    <p>This is a responsive background video.</p>
-  </div>
 </body>
 </html>
