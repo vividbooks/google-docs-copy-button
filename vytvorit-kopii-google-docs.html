@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8">
-    <title>Vytvořit kopii Google Sheets</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 50px;
-      }
-      button {
-        padding: 12px 24px;
-        font-size: 11px;
-        background-color: #4E5871;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #155cc1;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Vytvořte si vlastní kopii Google Sheets</h2>
-    <button onclick="createCopy()">Vytvořit kopii</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Background</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #FBF5DE; /* světle žlutá */
+    }
 
-    <script>
-      function createCopy() {
-        const docId = "18jFQabNJuIvjTINCLjaT0r4CGySGZu6KYkMUlUqp74M";
-        const copyUrl = `https://docs.google.com/spreadsheets/d/${docId}/copy`;
-        window.location.href = copyUrl; // Otevře v aktuálním okně
-      }
-    </script>
-  </body>
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      background-color: #FBF5DE;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline>
+    <source src="jezek.mp4" type="video/mp4" />
+    Váš prohlížeč nepodporuje HTML5 video.
+  </video>
+</body>
 </html>
