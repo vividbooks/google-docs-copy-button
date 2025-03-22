@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Video2</title>
+  <title>jezek</title>
   <style>
-    body {
+    /* Tělo stránky zabírá 100% plochy a používá Flexbox pro centrování */
+    html, body {
       margin: 0;
       padding: 0;
-      background-color: #FBF5DE; /* nastavená pozadí barva */
+      width: 100%;
+      height: 100%;
+      background-color: #FBF5DE;
+      display: flex;
+      align-items: center;     /* svislé zarovnání na střed */
+      justify-content: center; /* vodorovné zarovnání na střed */
     }
+
+    /* Video vyplní maximálně 100% šířky rodiče, zachová poměr stran */
     video {
-      display: block;     /* odstraní případné mezery okolo videa */
-      width: 100%;        /* roztáhne video na šířku rodiče */
-      height: auto;       /* udrží poměr stran */
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
